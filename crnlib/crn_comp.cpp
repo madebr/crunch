@@ -2134,7 +2134,7 @@ namespace crnlib
 
    bool crn_comp::compress_init(const crn_comp_params& params)
    {
-      params;
+      (void)params;
       return true;
    }
 
