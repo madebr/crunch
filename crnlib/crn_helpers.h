@@ -48,7 +48,7 @@ namespace crnlib
       template <typename T> 
       inline void destruct(T* p) 
       {	   
-         p;
+         (void)p;
          p->~T(); 
       } 
       
