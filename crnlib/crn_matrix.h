@@ -20,7 +20,7 @@ namespace crnlib
                s += lhs(r, i) * rhs(i, c);
             result(r, c) = s;
          }
-         return result;
+      return result;
    }
 
    template<class X, class Y, class Z> Z& matrix_mul_helper_transpose_lhs(Z& result, const X& lhs, const Y& rhs)
@@ -36,7 +36,7 @@ namespace crnlib
                s += lhs(i, r) * rhs(i, c);
             result(r, c) = s;
          }
-         return result;
+      return result;
    }
 
    template<class X, class Y, class Z> Z& matrix_mul_helper_transpose_rhs(Z& result, const X& lhs, const Y& rhs)
@@ -52,7 +52,7 @@ namespace crnlib
                s += lhs(r, i) * rhs(c, i);
             result(r, c) = s;
          }
-         return result;
+      return result;
    }
 
    template<uint R, uint C, typename T>
