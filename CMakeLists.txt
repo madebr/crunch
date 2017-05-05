@@ -20,6 +20,8 @@ endif()
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${COMP_FLAGS}")
 
+set(CMAKE_CXX_STANDARD 11)
+
 add_subdirectory(crunch)
 add_subdirectory(crnlib)
 
