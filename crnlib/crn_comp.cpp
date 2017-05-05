@@ -1426,7 +1426,7 @@ namespace crnlib
 
    void crn_comp::optimize_color_endpoint_codebook_task(uint64 data, void* pData_ptr)
    {
-      data;
+      (void)data;
       optimize_color_endpoint_codebook_params* pParams = reinterpret_cast<optimize_color_endpoint_codebook_params*>(pData_ptr);
 
       if (pParams->m_iter_index == pParams->m_max_iter_index)
@@ -1539,7 +1539,7 @@ namespace crnlib
 
    void crn_comp::optimize_color_selector_codebook_task(uint64 data, void* pData_ptr)
    {
-      data;
+      (void)data;
       optimize_color_selector_codebook_params* pParams = reinterpret_cast<optimize_color_selector_codebook_params*>(pData_ptr);
 
       if (pParams->m_iter_index == pParams->m_max_iter_index)
