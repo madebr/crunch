@@ -27,7 +27,7 @@ namespace crnlib
 #ifdef CRNLIB_USE_WIN32_API
    bool colorized_console::console_output_func(eConsoleMessageType type, const char* pMsg, void* pData)
    {
-      pData;
+      (void)pData;
 
       if (console::get_output_disabled())
          return true;
@@ -81,7 +81,7 @@ namespace crnlib
 #else
    bool colorized_console::console_output_func(eConsoleMessageType type, const char* pMsg, void* pData)
    {
-      pData;
+      (void)pData;
       if (console::get_output_disabled())
          return true;
 
