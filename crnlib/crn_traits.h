@@ -31,7 +31,7 @@ namespace crnlib
       static inline void construct(T** p, T* init) { *p = init; }
       static inline void construct_array(T** p, uint n) { memset(p, 0, sizeof(T*) * n); }
       static inline void destruct(T** p) { p; }
-      static inline void destruct_array(T** p, uint n) { p, n; }
+      static inline void destruct_array(T** p, uint n) { (void)p, (void)n; }
    };
 
 #define CRNLIB_DEFINE_BUILT_IN_TYPE(X) \
