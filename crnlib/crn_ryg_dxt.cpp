@@ -511,7 +511,7 @@ namespace ryg_dxt
    // Alpha block compression (this is easy for a change)
    static void CompressAlphaBlock(sU8 *dest,const sU32 *src,sInt quality)
    {
-     quality;
+     (void)quality;
      const Pixel *block = (const Pixel *) src;
 
      // find min/max color
