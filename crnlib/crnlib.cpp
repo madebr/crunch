@@ -18,13 +18,13 @@ namespace crnlib
 {
    static void* realloc_func(void* p, size_t size, size_t* pActual_size, bool movable, void* pUser_data)
    {
-      pUser_data;
+      (void)pUser_data;
       return crnlib_realloc(p, size, pActual_size, movable);
    }
 
    static size_t msize_func(void* p, void* pUser_data)
    {
-      pUser_data;
+      (void)pUser_data;
       return crnlib_msize(p);
    }
 
