@@ -972,7 +972,7 @@ done:
       
    static uint etc1_decode_value(uint diff, uint inten, uint selector, uint packed_c)
    {
-      const uint limit = diff ? 32 : 16; limit;
+      const uint limit = diff ? 32 : 16; (void)limit;
       CRNLIB_ASSERT((diff < 2) && (inten < 8) && (selector < 4) && (packed_c < limit));
       int c;
       if (diff)
@@ -1024,7 +1024,7 @@ done:
    {
       CRNLIB_ASSERT(g_etc1_inverse_lookup[0][255]);
 
-      context, pack_params;
+      (void)context, (void)pack_params;
       static uint s_next_comp[4] = { 1, 2, 0, 1 };
             
       uint best_error = cUINT32_MAX, best_i = 0;
@@ -1115,7 +1115,7 @@ found_perfect_match:
    {
       CRNLIB_ASSERT(g_etc1_inverse_lookup[0][255]);
 
-      context, pack_params;
+      (void)context, (void)pack_params;
       static uint s_next_comp[4] = { 1, 2, 0, 1 };
 
       uint best_error = cUINT32_MAX, best_i = 0;
