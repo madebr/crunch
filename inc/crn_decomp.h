@@ -1563,7 +1563,7 @@ namespace crnd
    struct scalar_type< color_quad<c, q> >
    {
       enum { cFlag = true };
-      static inline void construct(color_quad<c, q>* p) { }
+      static inline void construct(color_quad<c, q>* p) { (void)p; }
       static inline void construct(color_quad<c, q>* p, const color_quad<c, q>& init) { memcpy(p, &init, sizeof(color_quad<c, q>)); }
       static inline void construct_array(color_quad<c, q>* p, uint32 n) { p, n; }
       static inline void destruct(color_quad<c, q>* p) { p; }
