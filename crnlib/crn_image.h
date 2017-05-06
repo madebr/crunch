@@ -408,7 +408,7 @@ namespace crnlib
             src_rect.get_left(), src_rect.get_top(), 
             math::minimum(src_rect.get_width(), dst_rect.get_width()), math::minimum(src_rect.get_height(), dst_rect.get_height()),
             dst_rect.get_left(), dst_rect.get_top(), src);
-         success;
+         (void)success;
          CRNLIB_ASSERT(success);
 
          return true;
