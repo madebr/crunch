@@ -3717,8 +3717,8 @@ static float *hdr_load(stbi *s, int *x, int *y, int *comp, int req_comp)
 	float *hdr_data;
 	int len;
 	unsigned char count, value;
-	int i, j, k, c1,c2, z;
-
+	int i, j, k, z;
+	unsigned char c1, c2;
 
 	// Check identifier
 	if (strcmp(hdr_gettoken(s,buffer), "#?RADIANCE") != 0)
@@ -3776,7 +3776,7 @@ static float *hdr_load(stbi *s, int *x, int *y, int *comp, int req_comp)
          if (c1 != 2 || c2 != 2 || (len & 0x80)) {
             // not run-length encoded, so we have to actually use THIS data as a decoded
             // pixel (note this can't be a valid pixel--one of RGB must be >= 128)
-            stbi_uc rgbe[4] = { c1,c2,len, get8(s) };
+            stbi_uc rgbe[4] = { c1,c2,(unsigned char)len,(unsigned char)get8(s) };
             hdr_convert(hdr_data, rgbe, req_comp);
             i = 1;
             j = 0;
