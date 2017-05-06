@@ -827,7 +827,7 @@ namespace crnlib
    struct scalar_type< vec<N, T> >
    {
       enum { cFlag = true };
-      static inline void construct(vec<N, T>* p) { }
+      static inline void construct(vec<N, T>* p) { (void)p; }
       static inline void construct(vec<N, T>* p, const vec<N, T>& init) { memcpy(p, &init, sizeof(vec<N, T>)); }
       static inline void construct_array(vec<N, T>* p, uint n) { (void)p, (void)n; }
       static inline void destruct(vec<N, T>* p) { p; }
