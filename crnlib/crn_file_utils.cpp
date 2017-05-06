@@ -108,21 +108,21 @@ namespace crnlib
 #elif defined( __GNUC__ )
    bool file_utils::is_read_only(const char* pFilename)
    {
-      pFilename;
+      (void)pFilename;
       // TODO
       return false;
    }
 
    bool file_utils::disable_read_only(const char* pFilename)
    {
-      pFilename;
+      (void)pFilename;
       // TODO
       return false;
    }
 
    bool file_utils::is_older_than(const char *pSrcFilename, const char* pDstFilename)
    {
-      pSrcFilename, pDstFilename;
+      (void)pSrcFilename, (void)pDstFilename;
       // TODO
       return false;
    }
@@ -246,7 +246,7 @@ namespace crnlib
 #ifdef WIN32
       return (c == ':');
 #else
-      c;
+      (void)c;
       return false;
 #endif
    }
@@ -448,7 +448,7 @@ namespace crnlib
 
    bool file_utils::create_path(const dynamic_string& fullpath)
    {
-      bool got_unc = false; got_unc;
+      bool got_unc = false; (void)got_unc;
       dynamic_string cur_path;
 
       const int l = fullpath.get_len();
