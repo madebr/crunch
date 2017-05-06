@@ -20,7 +20,7 @@ namespace crnlib
 
    void corpus_tester::print_comparative_metric_stats(const command_line_params& cmd_line_params, const crnlib::vector<image_utils::error_metrics>& stats1, const crnlib::vector<image_utils::error_metrics>& stats2, uint num_blocks_x, uint num_blocks_y)
    {
-      num_blocks_y;
+      (void)num_blocks_y;
 
       crnlib::vector<uint> better_blocks;
       crnlib::vector<uint> equal_blocks;
@@ -82,7 +82,7 @@ namespace crnlib
 
    void corpus_tester::print_metric_stats(const crnlib::vector<image_utils::error_metrics>& stats, uint num_blocks_x, uint num_blocks_y)
    {
-      num_blocks_y;
+      (void)num_blocks_y;
 
       image_utils::error_metrics best_metrics;
       image_utils::error_metrics worst_metrics;
@@ -167,7 +167,7 @@ namespace crnlib
    static bool progress_callback(uint percentage_complete, void* pUser_data_ptr)
    {
       static int s_prev_percentage_complete = -1;
-      pUser_data_ptr;
+      (void)pUser_data_ptr;
       if (s_prev_percentage_complete != static_cast<int>(percentage_complete))
       {
          console::progress("%u%%", percentage_complete);
