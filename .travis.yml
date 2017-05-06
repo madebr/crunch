@@ -2,20 +2,21 @@ sudo: false
 dist: trusty
 language: cpp
 
-addons: 
-  apt: 
-    sources: 
+addons:
+  apt:
+    sources:
       - ubuntu-toolchain-r-test
       - llvm-toolchain-trusty-4.0
-    packages: 
+    packages:
+      - gcc-6
       - g++-6
       - clang-4.0
+      - clang++-4.0
 
-matrix:
-  - compiler: gcc
-    env: COMPILER=g++-6
-  - compiler: clang
-    env: COMPILER=clang++4.0
+env:
+  matrix:
+    - COMP_CXX=g++-6 COMP_CC=gcc-6
+    - COMP_CXX=clang-4.0 COMP_CC=clang-4.0
 
 before_script:
   - CMAKE_VERSION="cmake-3.8.1-Linux-x86_64"
@@ -26,5 +27,5 @@ before_script:
 script:
   - mkdir build
   - cd build
-  - $CMAKE -DCMAKE_CXX_COMPILER=$COMPILER ..
+  - $CMAKE -DCMAKE_C_COMPILER=$COMP_CC -DCMAKE_CXX_COMPILER=$COMP_CXX ..
   - $CMAKE --build .
