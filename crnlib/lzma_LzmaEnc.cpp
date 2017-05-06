@@ -2092,12 +2092,13 @@ SRes LzmaEnc_MemPrepare(CLzmaEncHandle pp, const Byte *src, SizeT srcLen,
 
 void LzmaEnc_Finish(CLzmaEncHandle pp)
 {
+  (void)pp;
   #ifdef COMPRESS_MF_MT
   CLzmaEnc *p = (CLzmaEnc *)pp;
   if (p->mtMode)
     MatchFinderMt_ReleaseStream(&p->matchFinderMt);
   #else
-  pp = pp;
+  //pp = pp;
   #endif
 }
 
