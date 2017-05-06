@@ -61,7 +61,7 @@ namespace crnlib
 
    mutex::mutex(unsigned int spin_count)
    {
-      spin_count;
+      (void)spin_count;
 
       if (pthread_mutex_init(&m_mutex, NULL))
          crnlib_fail("mutex::mutex: pthread_mutex_init() failed", __FILE__, __LINE__);
@@ -101,12 +101,12 @@ namespace crnlib
 
    void mutex::set_spin_count(unsigned int count)
    {
-      count;
+      (void)count;
    }
 
    semaphore::semaphore(long initialCount, long maximumCount, const char* pName)
    {
-      maximumCount, pName;
+      (void)maximumCount, (void)pName;
       CRNLIB_ASSERT(maximumCount >= initialCount);
       if (sem_init(&m_sem, 0, initialCount))
       {

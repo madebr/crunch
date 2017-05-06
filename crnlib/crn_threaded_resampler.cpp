@@ -44,7 +44,7 @@ namespace crnlib
 
    void threaded_resampler::resample_x_task(uint64 data, void* pData_ptr)
    {
-      pData_ptr;
+      (void)pData_ptr;
       const uint thread_index = (uint)data;
 
       for (uint src_y = 0; src_y < m_pParams->m_src_height; src_y++)
@@ -158,7 +158,7 @@ namespace crnlib
 
    void threaded_resampler::resample_y_task(uint64 data, void* pData_ptr)
    {
-      pData_ptr;
+      (void)pData_ptr;
 
       const uint thread_index = (uint)data;
 
