@@ -1629,7 +1629,7 @@ static uint8 *resample_row_1(uint8 *out, uint8 *in_near, uint8 *in_far, int w, i
 
 static uint8* resample_row_v_2(uint8 *out, uint8 *in_near, uint8 *in_far, int w, int hs)
 {
-   hs;
+   (void)hs;
    // need to generate two samples vertically for every one in input
    int i;
    for (i=0; i < w; ++i)
@@ -2545,7 +2545,7 @@ static int compute_transparency(png *z, uint8 tc[3], int out_n)
 
 static int expand_palette(png *a, uint8 *palette, int len, int pal_img_n)
 {
-   len;
+   (void)len;
    uint32 i, pixel_count = a->s.img_x * a->s.img_y;
    uint8 *p, *temp_out, *orig = a->out;
 
