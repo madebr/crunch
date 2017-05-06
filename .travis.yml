@@ -16,7 +16,7 @@ addons:
 env:
   matrix:
     - COMP_CXX=g++-6 COMP_CC=gcc-6
-    - COMP_CXX=clang-4.0 COMP_CC=clang-4.0
+    - COMP_CXX=clang++-4.0 COMP_CC=clang-4.0
 
 before_script:
   - CMAKE_VERSION="cmake-3.8.1-Linux-x86_64"
@@ -25,6 +25,7 @@ before_script:
   - export CMAKE="$(pwd)/$CMAKE_VERSION/bin/cmake"
   - $CMAKE --version
 script:
+  - ls /usr/bin/cl*
   - mkdir build
   - cd build
   - $CMAKE -DCMAKE_C_COMPILER=$COMP_CC -DCMAKE_CXX_COMPILER=$COMP_CXX ..
