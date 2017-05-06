@@ -63,7 +63,7 @@ namespace crnlib
 
    static void* crnlib_default_realloc(void* p, size_t size, size_t* pActual_size, bool movable, void* pUser_data)
    {
-      pUser_data;
+      (void)pUser_data;
 
       void* p_new;
 
@@ -126,7 +126,7 @@ namespace crnlib
 
    static size_t crnlib_default_msize(void* p, void* pUser_data)
    {
-      pUser_data;
+      (void)pUser_data;
       return p ? _msize(p) : 0;
    }
 
