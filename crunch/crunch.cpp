@@ -684,7 +684,7 @@ private:
 
    static bool progress_callback_func(uint32 percentage_complete, void* pUser_data_ptr)
    {
-      pUser_data_ptr;
+      (void)pUser_data_ptr;
 
       console::disable_crlf();
 
@@ -1263,8 +1263,8 @@ static void print_title()
 
 static int main_internal(int argc, char *argv[])
 {
-   argc;
-   argv;
+   (void)argc;
+   (void)argv;
 
    colorized_console::init();
 
