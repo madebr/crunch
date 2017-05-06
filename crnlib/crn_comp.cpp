@@ -192,7 +192,7 @@ namespace crnlib
       const crnlib::vector<uint>& endpoint_indices,
       uint trial_index)
    {
-      trial_index;
+      (void)trial_index;
 
 #if CRNLIB_ENABLE_DEBUG_MESSAGES
       if (m_pParams->m_flags & cCRNCompFlagDebugging)
@@ -310,7 +310,7 @@ namespace crnlib
 #endif
 
       uint start_bits = codec.encode_get_total_bits_written();
-      start_bits;
+      (void)start_bits;
 
       for (uint i = 0; i < residual_syms.size(); i++)
       {
@@ -347,7 +347,7 @@ namespace crnlib
       const crnlib::vector<uint>& endpoint_indices,
       uint trial_index)
    {
-      trial_index;
+      (void)trial_index;
 
 #if CRNLIB_ENABLE_DEBUG_MESSAGES
       if (m_pParams->m_flags & cCRNCompFlagDebugging)
@@ -454,7 +454,7 @@ namespace crnlib
 #endif
 
       uint start_bits = codec.encode_get_total_bits_written();
-      start_bits;
+      (void)start_bits;
 
       for (uint i = 0; i < residual_syms.size(); i++)
       {
@@ -602,7 +602,7 @@ namespace crnlib
       const uint8* pTo_linear,
       uint trial_index)
    {
-      trial_index;
+      (void)trial_index;
 
 #if CRNLIB_ENABLE_DEBUG_MESSAGES
       if (m_pParams->m_flags & cCRNCompFlagDebugging)
@@ -708,8 +708,7 @@ namespace crnlib
 #endif
 
       uint start_bits = codec.encode_get_total_bits_written();
-      start_bits;
-
+	(void)start_bits;
       for (uint i = 0; i < residual_syms.size(); i++)
       {
          const uint sym = residual_syms[i];
@@ -1667,7 +1666,7 @@ namespace crnlib
 
    void crn_comp::optimize_alpha_endpoint_codebook_task(uint64 data, void* pData_ptr)
    {
-      data;
+      (void)data;
       optimize_alpha_endpoint_codebook_params* pParams = reinterpret_cast<optimize_alpha_endpoint_codebook_params*>(pData_ptr);
 
       if (pParams->m_iter_index == pParams->m_max_iter_index)
@@ -1788,7 +1787,7 @@ namespace crnlib
 
    void crn_comp::optimize_alpha_selector_codebook_task(uint64 data, void* pData_ptr)
    {
-      data;
+      (void)data;
       optimize_alpha_selector_codebook_params* pParams = reinterpret_cast<optimize_alpha_selector_codebook_params*>(pData_ptr);
 
       if (pParams->m_iter_index == pParams->m_max_iter_index)
