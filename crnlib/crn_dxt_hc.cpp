@@ -224,7 +224,7 @@ namespace crnlib
       uint chunk_index, const image_u8& chunk, uint x_ofs, uint y_ofs, uint width, uint height,
       uint8* pColor_Selectors)
    {
-      chunk_index;
+      (void)chunk_index;
 
       color_quad_u8 pixels[cChunkPixelWidth * cChunkPixelHeight];
 
@@ -266,7 +266,7 @@ namespace crnlib
       uint chunk_index, const image_u8& chunk, uint x_ofs, uint y_ofs, uint width, uint height, uint component_index,
       uint8* pAlpha_selectors)
    {
-      chunk_index;
+      (void)chunk_index;
 
       color_quad_u8 pixels[cChunkPixelWidth * cChunkPixelHeight];
 
@@ -300,7 +300,7 @@ namespace crnlib
 
    void dxt_hc::determine_compressed_chunks_task(uint64 data, void* pData_ptr)
    {
-      pData_ptr;
+      (void)pData_ptr;
       const uint thread_index = static_cast<uint>(data);
 
       image_u8 orig_chunk;
@@ -1021,7 +1021,7 @@ namespace crnlib
 
    void dxt_hc::determine_color_endpoint_codebook_task(uint64 data, void* pData_ptr)
    {
-      pData_ptr;
+      (void)pData_ptr;
       const uint thread_index = static_cast<uint>(data);
 
       if (!m_has_color_blocks)
@@ -1099,7 +1099,7 @@ namespace crnlib
 
          dxt1_endpoint_optimizer optimizer;
          const bool all_transparent = optimizer.compute(params, results);
-         all_transparent;
+         (void)all_transparent;
 
          cluster.m_first_endpoint = results.m_low_color;
          cluster.m_second_endpoint = results.m_high_color;
@@ -1124,7 +1124,7 @@ namespace crnlib
             const compressed_tile& tile = chunk.m_tiles[tile_index];
 
             const chunk_tile_desc& layout = g_chunk_tile_layouts[tile.m_layout_index];
-            layout;
+            (void)layout;
 
             compressed_tile& quantized_tile = chunk.m_quantized_tiles[tile_index];
 
@@ -1176,7 +1176,7 @@ namespace crnlib
 
    void dxt_hc::determine_alpha_endpoint_codebook_task(uint64 data, void* pData_ptr)
    {
-      pData_ptr;
+      (void)pData_ptr;
 
       const uint thread_index = static_cast<uint>(data);
 
@@ -1260,7 +1260,7 @@ namespace crnlib
 
          dxt5_endpoint_optimizer optimizer;
          const bool all_transparent = optimizer.compute(params, results);
-         all_transparent;
+         (void)all_transparent;
 
          cluster.m_first_endpoint = results.m_first_endpoint;
          cluster.m_second_endpoint = results.m_second_endpoint;
@@ -1286,7 +1286,7 @@ namespace crnlib
             const compressed_tile& tile = chunk.m_tiles[tile_index];
 
             const chunk_tile_desc& layout = g_chunk_tile_layouts[tile.m_layout_index];
-            layout;
+            (void)layout;
 
             compressed_tile& quantized_tile = chunk.m_quantized_tiles[tile_index];
 
