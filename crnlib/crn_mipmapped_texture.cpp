@@ -187,7 +187,7 @@ namespace crnlib
 
       image_u8* pNew_img = crnlib_new<image_u8>();
       image_u8* pImg = get_unpacked_image(*pNew_img, uncook ? cUnpackFlagUncook : 0);
-      pImg;
+      (void)pImg;
 
       CRNLIB_ASSERT(pImg == pNew_img);
 
@@ -1213,7 +1213,7 @@ namespace crnlib
                const uint num_blocks_y = (height + 3) >> 2;
 
                CRNLIB_ASSERT(num_blocks_x * num_blocks_y * p->get_elements_per_block() == p->get_total_elements());
-               width, height, num_blocks_x, num_blocks_y;
+               (void)width, (void)height, (void)num_blocks_x, (void)num_blocks_y;
 
                const uint size_in_bytes = p->get_total_elements() * sizeof(dxt_image::element);
                if (size_in_bytes > write_buf.size())
@@ -2863,7 +2863,7 @@ namespace crnlib
    
    bool mipmapped_texture::read_regular_image(data_stream_serializer &serializer, texture_file_types::format file_format)
    {
-      file_format;
+      (void)file_format;
 
       image_u8* pImg = crnlib_new<image_u8>();
       bool status = image_utils::read_from_stream(*pImg, serializer, 0);
