@@ -756,7 +756,7 @@ static void getn(stbi *s, stbi_uc *buffer, int n)
 {
 #ifndef STBI_NO_STDIO
    if (s->img_file) {
-      size_t nr = fread(buffer, 1, n, s->img_file); nr;
+      size_t nr = fread(buffer, 1, n, s->img_file); (void)nr;
       return;
    }
 #endif
@@ -1623,7 +1623,7 @@ typedef uint8 *(*resample_row_func)(uint8 *out, uint8 *in0, uint8 *in1,
 
 static uint8 *resample_row_1(uint8 *out, uint8 *in_near, uint8 *in_far, int w, int hs)
 {
-   out, in_far, w, hs;
+   (void)out, (void)in_far, (void)w, (void)hs;
    return in_near;
 }
 
@@ -1639,7 +1639,7 @@ static uint8* resample_row_v_2(uint8 *out, uint8 *in_near, uint8 *in_far, int w,
 
 static uint8*  resample_row_h_2(uint8 *out, uint8 *in_near, uint8 *in_far, int w, int hs)
 {
-   hs, in_far;
+   (void)hs, (void)in_far;
    // need to generate two samples horizontally for every one in input
    int i;
    uint8 *input = in_near;
@@ -1665,7 +1665,7 @@ static uint8*  resample_row_h_2(uint8 *out, uint8 *in_near, uint8 *in_far, int w
 
 static uint8 *resample_row_hv_2(uint8 *out, uint8 *in_near, uint8 *in_far, int w, int hs)
 {
-   hs;
+   (void)hs;
    // need to generate 2x2 samples for every one in input
    int i,t0,t1;
    if (w == 1) {
@@ -1687,7 +1687,7 @@ static uint8 *resample_row_hv_2(uint8 *out, uint8 *in_near, uint8 *in_far, int w
 
 static uint8 *resample_row_generic(uint8 *out, uint8 *in_near, uint8 *in_far, int w, int hs)
 {
-   in_far;
+   (void)in_far;
    // resample with nearest-neighbor
    int i,j;
    for (i=0; i < w; ++i)
