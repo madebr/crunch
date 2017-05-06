@@ -407,7 +407,7 @@ namespace crnlib
 
    void qdxt1::pack_endpoints_task(uint64 data, void* pData_ptr)
    {
-      pData_ptr;
+      (void)pData_ptr;
       const uint thread_index = static_cast<uint>(data);
 
       crnlib::vector<color_quad_u8> cluster_pixels;
