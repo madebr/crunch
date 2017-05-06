@@ -300,7 +300,7 @@ namespace crnlib
 
       static bool generate_codebook_dummy_progress_callback(uint percentage_completed, void* pData)
       {
-         percentage_completed;
+         (void)percentage_completed;
 
          if (static_cast<threaded_clusterizer*>(pData)->m_canceled)
             return false;
