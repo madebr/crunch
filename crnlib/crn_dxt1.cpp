@@ -582,7 +582,6 @@ namespace crnlib
                      bool better = evaluate_solution(
                         dxt1_solution_coordinates(dxt1_block::pack_color(l, false), dxt1_block::pack_color(h, false)),
                         true, &m_best_solution);
-                     better;
 
                      if (better)
                      {
@@ -1989,7 +1988,7 @@ namespace crnlib
    bool dxt1_endpoint_optimizer::try_alpha_as_black_optimization()
    {
       const params*  pOrig_params = m_pParams;
-      pOrig_params;
+      (void)pOrig_params;
       results*       pOrig_results = m_pResults;
 
       uint num_dark_colors = 0;
