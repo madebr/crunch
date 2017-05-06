@@ -10,7 +10,7 @@ namespace crnlib
    dynamic_string::dynamic_string(eVarArg dummy, const char* p, ...) :
       m_buf_size(0), m_len(0), m_pStr(NULL)
    {
-      dummy;
+      (void)dummy;
 
       CRNLIB_ASSERT(p);
 
